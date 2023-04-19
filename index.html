@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JavaScript ile Ürün Sipariş Formu</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body onload="urunAdediDoldur();urunTaksidiDoldur()">
+    <div class="container">
+        <div class="header">
+            <h1>Parfüm Ürünleri Sipariş Formu</h1>
+        </div>
+        <form action="#" id="urunForm">
+            <!-- Cinsiyet Seçimi -->
+            <label for="urunTipi">Ürün seçimi yapınız</label>
+            <span>
+
+                <input type="radio" id="erkekUrunleri" value="E" name="urunTipi" onchange="urunleriGetir()">
+                <label for="erkekUrunleri">Erkek Ürünleri</label>
+                
+                <input type="radio" id="kadinUrunleri" value="K" name="urunTipi" onchange="urunleriGetir()">
+                <label for="kadinUrunleri">Kadın Ürünleri</label>
+            </span>
+
+            <!-- Ürün Seçimi -->
+            <label for="urunListesi">Ürün Seçimini Yapınız</label>
+            <select name="" id="urunListesi" size="4"></select>
+
+            <!-- Adet Seçimi -->
+
+            <label for="urunAdedi">Ürün Adedi Seçiniz</label>
+            <select name="" id="urunAdedi"></select>
+
+            <!-- Taksit Seçimi -->
+
+            <label for="urunTaksidi">Taksit Sayısını Seçiniz</label>
+            <select id="urunTaksidi"></select>
+            
+            <input type="button" value="ARA TOPLAMI HESAPLA" id="btnAraToplam" onclick="fiyatHesaplama()">
+
+            <!-- Sonuçları Yazdır -->
+            <label class="height1" for="txtBirimFiyat">Birim Fiyat</label>
+            <input type="text" id="txtBirimFiyat" disabled>
+
+            <label class="height1" for="txtAraToplam">Ara Toplam Tutarı</label>
+            <input type="text" id="txtAraToplam" disabled>
+
+            <label class="height1" for="txtKargo">Kargo Ücreti</label>
+            <input type="text" id="txtKargo" disabled>
+
+            <label class="height1" for="sonuc">Toplam Tutar</label>
+            <input class="height2" type="text" id="sonuc" disabled>
+        </form>
+    </div>
+
+</body>
+
+</html>
